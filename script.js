@@ -1,23 +1,16 @@
 function simplifyText() {
     let input = document.getElementById("inputText").value;
-    let output = document.getElementById("output");
-
-    if (input.trim() === "") {
-        output.innerHTML = "Please enter text first.";
-        return;
-    }
-
-    output.innerHTML = "Simple Version:<br><br>" + input.substring(0, 150) + "...";
+    let result = "Simplified:\n" + input.substring(0, 150);
+    document.getElementById("result").innerText = result;
 }
 
 function summarizeText() {
     let input = document.getElementById("inputText").value;
-    let output = document.getElementById("output");
+    let result = "Summary:\n" + input.substring(0, 80) + "...";
+    document.getElementById("result").innerText = result;
+}
 
-    if (input.trim() === "") {
-        output.innerHTML = "Please enter text first.";
-        return;
-    }
-
-    output.innerHTML = "Summary:<br><br>" + input.substring(0, 80) + "...";
+function clearText() {
+    document.getElementById("inputText").value = "";
+    document.getElementById("result").innerText = "Your result will appear here...";
 }
