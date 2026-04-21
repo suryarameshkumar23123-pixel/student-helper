@@ -1,25 +1,40 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Student Helper</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Student Helper</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1>🎓 Smart Student Helper</h1>
+<div class="container">
+    <header>
+        <h1>🎓 Smart Student Helper</h1>
+        <p>Your AI-powered study assistant</p>
+    </header>
 
-    <textarea id="inputText" placeholder="Paste assignment here"></textarea>
+    <div class="card">
+        <textarea id="inputText" placeholder="Paste your assignment, notes, or questions here..."></textarea>
 
-    <br><br>
+        <div class="buttons">
+            <button onclick="simplifyText()">Simplify</button>
+            <button onclick="summarizeText()">Summarize</button>
+            <button onclick="clearText()">Clear</button>
+        </div>
 
-    <button onclick="simplify()">Simplify</button>
-    <button onclick="summarize()">Summarize</button>
+        <div class="output-box">
+            <h3>Result:</h3>
+            <p id="outputText">Your result will appear here...</p>
+        </div>
+    </div>
 
-    <div id="output"></div>
+    <footer>
+        <p>Made by Surya | Final Hackathon Project</p>
+    </footer>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
