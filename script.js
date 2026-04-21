@@ -1,9 +1,23 @@
-function simplify() {
-    let text = document.getElementById("inputText").value;
-    document.getElementById("output").innerHTML = "Simple: " + text;
+function simplifyText() {
+    let input = document.getElementById("inputText").value;
+    let output = document.getElementById("output");
+
+    if (input.trim() === "") {
+        output.innerHTML = "Please enter text first.";
+        return;
+    }
+
+    output.innerHTML = "Simple Version:<br><br>" + input.substring(0, 150) + "...";
 }
 
-function summarize() {
-    let text = document.getElementById("inputText").value;
-    document.getElementById("output").innerHTML = "Summary: " + text.substring(0, 100);
+function summarizeText() {
+    let input = document.getElementById("inputText").value;
+    let output = document.getElementById("output");
+
+    if (input.trim() === "") {
+        output.innerHTML = "Please enter text first.";
+        return;
+    }
+
+    output.innerHTML = "Summary:<br><br>" + input.substring(0, 80) + "...";
 }
